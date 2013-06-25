@@ -9,9 +9,12 @@
 #define BL_UI_COLOR_BUTTON_BORDER { 0, 0, 0, 1 }
 #define BL_UI_COLOR_BUTTON_SHADOW { 0, 0, 0, 0.5 }
 #define BL_UI_COLOR_TEXT { 1, 1, 1, 1 }
+#define BL_UI_COLOR_TEXT_HEADER { 0.59, 0.70, 0.34, 1 }
 #define BL_UI_COLOR_TRANSPARENT { 0, 0, 0, 0 }
 #define BL_UI_COLOR_SCROLLBAR { 1, 1, 1, 1 }
 #define BL_UI_COLOR_SCROLLBAR_DISABLED { 1, 1, 1, 0.33 }
+#define BL_UI_COLOR_LISTBOX_SELECTED_BACKGROUND { 0.59, 0.70, 0.34, 1 }
+#define BL_UI_COLOR_LISTBOX_SELECTED_TEXT { 1, 1, 1, 1 }
 
 // Sounds
 
@@ -23,6 +26,7 @@
 #define BL_UI_TEXT_TITLE_SIZE 0.05
 #define BL_UI_TEXT_BUTTON_SIZE 0.04
 #define BL_UI_TEXT_BODY_SIZE 0.04
+#define BL_UI_TEXT_HEADER_SIZE 0.05
 
 // Control types
 

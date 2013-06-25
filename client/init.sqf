@@ -7,3 +7,4 @@ player setVariable ["money", 20];
 
 // Open a dialog
 _dialog = createDialog "BL_UI_MissionsDialog";
+_index = lbAdd [1, "A poultry problem ($25)"];
