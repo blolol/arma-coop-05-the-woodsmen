@@ -1,0 +1,105 @@
+#define true 1
+#define false 0
+
+// Colors
+
+#define BL_UI_COLOR_BACKGROUND { 0.16, 0.2, 0.09, 0.85 }
+#define BL_UI_COLOR_BAR_BACKGROUND { 0.08, 0.1, 0.05, 0.85 }
+#define BL_UI_COLOR_BUTTON_BACKGROUND { 0.35, 0.41, 0.2, 1 }
+#define BL_UI_COLOR_BUTTON_BORDER { 0, 0, 0, 1 }
+#define BL_UI_COLOR_BUTTON_SHADOW { 0, 0, 0, 0.5 }
+#define BL_UI_COLOR_TEXT { 1, 1, 1, 1 }
+#define BL_UI_COLOR_TRANSPARENT { 0, 0, 0, 0 }
+#define BL_UI_COLOR_SCROLLBAR { 1, 1, 1, 1 }
+#define BL_UI_COLOR_SCROLLBAR_DISABLED { 1, 1, 1, 0.33 }
+
+// Sounds
+
+#define BL_UI_SOUND_NONE { "", 0, 1 }
+
+// Text
+
+#define BL_UI_TEXT_FONT "Zeppelin32"
+#define BL_UI_TEXT_TITLE_SIZE 0.05
+#define BL_UI_TEXT_BUTTON_SIZE 0.04
+#define BL_UI_TEXT_BODY_SIZE 0.04
+
+// Control types
+
+#define BL_UI_STATIC 0
+#define BL_UI_BUTTON 1
+#define BL_UI_EDIT 2
+#define BL_UI_SLIDER 3
+#define BL_UI_COMBO 4
+#define BL_UI_LISTBOX 5
+#define BL_UI_TOOLBOX 6
+#define BL_UI_CHECKBOXES 7
+#define BL_UI_PROGRESS 8
+#define BL_UI_HTML 9
+#define BL_UI_STATIC_SKEW 10
+#define BL_UI_ACTIVETEXT 11
+#define BL_UI_TREE 12
+#define BL_UI_STRUCTURED_TEXT 13
+#define BL_UI_CONTEXT_MENU 14
+#define BL_UI_CONTROLS_GROUP 15
+#define BL_UI_SHORTCUTBUTTON 16
+#define BL_UI_XKEYDESC 40
+#define BL_UI_XBUTTON 41
+#define BL_UI_XLISTBOX 42
+#define BL_UI_XSLIDER 43
+#define BL_UI_XCOMBO 44
+#define BL_UI_ANIMATED_TEXTURE 45
+#define BL_UI_OBJECT 80
+#define BL_UI_OBJEBL_UI_ZOOM 81
+#define BL_UI_OBJEBL_UI_CONTAINER 82
+#define BL_UI_OBJEBL_UI_CONT_ANIM 83
+#define BL_UI_LINEBREAK 98
+#define BL_UI_ANIMATED_USER 99
+#define BL_UI_MAP 100
+#define BL_UI_MAP_MAIN 101
+#define BL_UI_LISTNBOX 102
+
+// Control styles
+
+#define BL_UI_STYLE_POS 0x0F
+#define BL_UI_STYLE_HPOS 0x03
+#define BL_UI_STYLE_VPOS 0x0C
+#define BL_UI_STYLE_LEFT 0x00
+#define BL_UI_STYLE_RIGHT 0x01
+#define BL_UI_STYLE_CENTER 0x02
+#define BL_UI_STYLE_DOWN 0x04
+#define BL_UI_STYLE_UP 0x08
+#define BL_UI_STYLE_VCENTER 0x0c
+#define BL_UI_STYLE_TYPE 0xF0
+#define BL_UI_STYLE_SINGLE 0
+#define BL_UI_STYLE_MULTI 16
+#define BL_UI_STYLE_TITLE_BAR 32
+#define BL_UI_STYLE_PICTURE 48
+#define BL_UI_STYLE_FRAME 64
+#define BL_UI_STYLE_BACKGROUND 80
+#define BL_UI_STYLE_GROUP_BOX 96
+#define BL_UI_STYLE_GROUP_BOX2 112
+#define BL_UI_STYLE_HUD_BACKGROUND 128
+#define BL_UI_STYLE_TILE_PICTURE 144
+#define BL_UI_STYLE_WITH_RECT 160
+#define BL_UI_STYLE_LINE 176
+#define BL_UI_STYLE_SHADOW 0x100
+#define BL_UI_STYLE_NO_RECT 0x200
+#define BL_UI_STYLE_KEEP_ASPECT_RATIO 0x800
+
+// Button IDCs reserved by the game engine
+
+#define BL_UI_BUTTON_IDC_OK 1
+#define BL_UI_BUTTON_IDC_CANCEL 2
+
+// Slider control styles
+
+#define BL_UI_STYLE_SLIDER_DIR 0x400
+#define BL_UI_STYLE_SLIDER_VERT 0
+#define BL_UI_STYLE_SLIDER_HORZ 0x400
+#define BL_UI_STYLE_SLIDER_TEXTURES 0x10
+
+// Listbox control styles
+
+#define BL_UI_STYLE_LISTBOX_TEXTURES 0x10
+#define BL_UI_STYLE_LISTBOX_MULTI 0x20

@@ -1,0 +1,23 @@
+#define BL_WOODSMEN_VERSION 0.0.1
+
+onLoadName = "The Woodsmen BL_WOODSMEN_VERSION";
+onLoadMission = "A group of Chernarus woodsmen are after-hours vigilantes.";
+author = "Raws";
+
+class Header {
+	gameType = COOP;
+	minPlayers = 1;
+	maxPlayers = 5;
+};
+
+class CfgIdentities {
+	class Oleg {
+		name = "Oleg";
+		face = "Face75";
+		glasses = "None";
+		speaker = "Oleg";
+		pitch = 0.85;
+	};
+};
+
+#include "client\ui.hpp"
