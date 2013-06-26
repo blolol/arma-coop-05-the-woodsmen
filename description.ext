@@ -15,7 +15,7 @@ class CfgIdentities {
 		name = "Oleg";
 		face = "Face75";
 		glasses = "None";
-		speaker = "Oleg";
+		speaker = "Male01CZ";
 		pitch = 0.85;
 	};
 };
