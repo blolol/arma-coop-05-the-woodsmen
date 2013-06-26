@@ -9,11 +9,13 @@ class Mission
 		"camisc3",
 		"castructures_e_misc_misc_market",
 		"castructures_e_misc_misc_interier",
-		"CAWheeled"
+		"CAWheeled",
+		"cba_main"
 	};
 	addOnsAuto[]=
 	{
 		"cacharacters2",
+		"cba_main",
 		"camisc_e",
 		"camisc3",
 		"castructures_e_misc_misc_market",
@@ -34,7 +36,7 @@ class Mission
 	};
 	class Groups
 	{
-		items=2;
+		items=3;
 		class Item0
 		{
 			side="CIV";
@@ -71,6 +73,24 @@ class Mission
 					skill=0.60000002;
 					text="oleg";
 					init="this setIdentity ""Oleg""";
+				};
+			};
+		};
+		class Item2
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={3407.0278,304.84183,4533.1523};
+					id=29;
+					side="LOGIC";
+					vehicle="CBA_main_require";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
 				};
 			};
 		};
