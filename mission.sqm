@@ -10,12 +10,14 @@ class Mission
 		"castructures_e_misc_misc_market",
 		"castructures_e_misc_misc_interier",
 		"CAWheeled",
-		"cba_main"
+		"cba_main",
+		"ca_modules_functions"
 	};
 	addOnsAuto[]=
 	{
 		"cacharacters2",
 		"cba_main",
+		"ca_modules_functions",
 		"camisc_e",
 		"camisc3",
 		"castructures_e_misc_misc_market",
@@ -36,7 +38,7 @@ class Mission
 	};
 	class Groups
 	{
-		items=3;
+		items=4;
 		class Item0
 		{
 			side="CIV";
@@ -88,6 +90,24 @@ class Mission
 					id=29;
 					side="LOGIC";
 					vehicle="CBA_main_require";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+				};
+			};
+		};
+		class Item3
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={3406.8015,304.38519,4548.1904};
+					id=30;
+					side="LOGIC";
+					vehicle="FunctionsManager";
 					leader=1;
 					lock="UNLOCKED";
 					skill=0.60000002;

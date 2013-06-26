@@ -20,4 +20,9 @@ class CfgIdentities {
 	};
 };
 
+#include "functions\functions.hpp"
 #include "client\ui.hpp"
+
+#ifdef BL_DEBUG
+#include "config\disable_caching.hpp"
+#endif
