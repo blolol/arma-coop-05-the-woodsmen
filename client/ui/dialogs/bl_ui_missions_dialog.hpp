@@ -1,6 +1,6 @@
 class BL_UI_MissionsDialog {
 	idd = -1;
-	onLoad = "uiNamespace setVariable ['BL_UI_MissionsDialog', _this select 0]";
+	onLoad = "uiNamespace setVariable ['BL_UI_MissionsDialog', _this select 0]; bl_shared_availableMissions call BL_fnc_clientUpdateAvailableMissions";
 	onUnLoad = "uiNamespace setVariable ['BL_UI_MissionsDialog', nil]";
 
 	movingEnable = true;
@@ -9,6 +9,7 @@ class BL_UI_MissionsDialog {
 	class Controls {
 		class MissionList {
 			idc = 1;
+			onLBSelChanged = "(_this select 1) call BL_fnc_clientOnMissionSelected";
 
 			type = BL_UI_LISTBOX;
 			style = BL_UI_STYLE_LISTBOX_TEXTURES;

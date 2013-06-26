@@ -1,7 +1,7 @@
 waituntil { !(isnil "bis_fnc_init") };
 
 if (isNil "bl_shared_availableMissions") then {
-	bl_shared_availableMissions = [];
+	bl_shared_availableMissions = [] call CBA_fnc_hashCreate;
 };
 
 if (isServer) then {
