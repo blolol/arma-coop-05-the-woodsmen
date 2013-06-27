@@ -1,7 +1,11 @@
+/**
+ * Main mission entry point.
+**/
+
 waituntil { !(isnil "bis_fnc_init") };
 
-if (isNil "bl_shared_availableMissions") then {
-	bl_shared_availableMissions = [] call CBA_fnc_hashCreate;
+if (isNil "blol_woodsmen_availableMissions") then {
+	blol_woodsmen_availableMissions = [] call CBA_fnc_hashCreate;
 };
 
 if (isServer) then {

@@ -1,20 +1,18 @@
-// Strip the player of his default gear
+/**
+ * Main client entry point.
+**/
+
 removeAllItems player;
 removeAllWeapons player;
 
-// Set the player's initial money balance
-_startingMoney = ["startingMoney", "number", 0] call BL_fnc_getConfigEntry;
-player setVariable ["bl_money", _startingMoney];
+private ["_money"];
+_money = ["money_initialBalance", "number", 0] call BLOL_fnc_config_get;
+player setVariable ["blol_woodsmen_money", _money];
 
-// Listen for available mission updates
-"bl_shared_availableMissions" addPublicVariableEventHandler {
-	_missions = _this select 1;
-	_missions call BL_fnc_clientUpdateAvailableMissions;
+"blol_woodsmen_availableMissions" addPublicVariableEventHandler {
+	call BLOL_fnc_ui_missionsDialog_redrawMissionsList;
 };
 
-// Add an action to Oleg to ask about missions
-oleg addAction ["Ask Oleg about missions", "functions\client\fn_clientOpenMissionsUi.sqf"];
+oleg addAction ["Ask Oleg about missions", "client\lib\functions\ui\missions_dialog\open.sqf"];
 
-// Display vitals dialog
-cutRsc ["BL_UI_VitalsHud", "PLAIN", 0];
-call BL_fnc_clientUpdateVitalsHud;
+call BLOL_fnc_ui_vitalsHud_open;

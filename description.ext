@@ -1,6 +1,8 @@
-#define BL_WOODSMEN_VERSION 0.0.1
+/**
+ * Mission configuration.
+**/
 
-onLoadName = "The Woodsmen BL_WOODSMEN_VERSION";
+onLoadName = "The Woodsmen";
 onLoadMission = "A group of Chernarus woodsmen are after-hours vigilantes.";
 author = "Raws";
 
@@ -10,27 +12,21 @@ class Header {
 	maxPlayers = 5;
 };
 
-class CfgIdentities {
-	class Oleg {
-		name = "Oleg";
-		face = "Face75";
-		glasses = "None";
-		speaker = "Male01CZ";
-		pitch = 0.85;
+class CfgFunctions {
+	class BLOL {
+		#include "include\functions.hpp"
+		#include "client\include\functions.hpp"
+		#include "server\include\functions.hpp"
 	};
 };
 
-class CfgWoodsmen {
-	#ifdef BL_DEBUG
-	startingMoney = 1000;
-	#else
-	startingMoney = 0;
-	#endif
+class CfgIdentities {
+	#include "client\include\identities.hpp"
 };
 
-#include "functions\functions.hpp"
-#include "client\ui.hpp"
+class CfgSettings {
+	#include "include\cache.hpp"
+	#include "include\settings.hpp"
+};
 
-#ifdef BL_DEBUG
-#include "config\disable_caching.hpp"
-#endif
+#include "client\include\ui.hpp"

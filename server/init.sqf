@@ -1,5 +1,7 @@
-// Initialize mission ID counter
-bl_missionIdCounter = 0;
+/**
+ * Main server entry point.
+**/
 
-// Broadcast test missions
-["A poultry problem", "Lorem ipsum dolor sit amet"] call BL_fnc_serverCreateMission;
+blol_woodsmen_missionIdCounter = 0;
+
+["A poultry problem", "Lorem ipsum dolor sit amet"] call BLOL_fnc_missions_create;
