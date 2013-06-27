@@ -3,7 +3,8 @@ removeAllItems player;
 removeAllWeapons player;
 
 // Set the player's initial money balance
-player setVariable ["bl_money", 20];
+_startingMoney = ["startingMoney", "number", 0] call BL_fnc_getConfigEntry;
+player setVariable ["bl_money", _startingMoney];
 
 // Listen for available mission updates
 "bl_shared_availableMissions" addPublicVariableEventHandler {

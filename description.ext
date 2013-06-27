@@ -20,6 +20,14 @@ class CfgIdentities {
 	};
 };
 
+class CfgWoodsmen {
+	#ifdef BL_DEBUG
+	startingMoney = 1000;
+	#else
+	startingMoney = 0;
+	#endif
+};
+
 #include "functions\functions.hpp"
 #include "client\ui.hpp"
 

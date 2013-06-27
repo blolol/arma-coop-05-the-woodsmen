@@ -28,6 +28,10 @@ class CfgFunctions {
 			class findAvailableMissionById {
 				description = "Find an available mission by its mission ID.";
 			};
+
+			class getConfigEntry {
+				description = "Fetch a mission config entry.";
+			};
 		};
 	};
 };
