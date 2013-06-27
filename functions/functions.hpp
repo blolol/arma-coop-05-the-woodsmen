@@ -12,6 +12,10 @@ class CfgFunctions {
 			class clientUpdateAvailableMissions {
 				description = "Update the client's local copy of available missions.";
 			};
+
+			class clientUpdateVitalsHud {
+				description = "Update the client's vitals HUD.";
+			};
 		};
 
 		class server {

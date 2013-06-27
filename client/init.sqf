@@ -3,7 +3,7 @@ removeAllItems player;
 removeAllWeapons player;
 
 // Set the player's initial money balance
-player setVariable ["money", 20];
+player setVariable ["bl_money", 20];
 
 // Listen for available mission updates
 "bl_shared_availableMissions" addPublicVariableEventHandler {
@@ -13,3 +13,7 @@ player setVariable ["money", 20];
 
 // Add an action to Oleg to ask about missions
 oleg addAction ["Ask Oleg about missions", "functions\client\fn_clientOpenMissionsUi.sqf"];
+
+// Display vitals dialog
+cutRsc ["BL_UI_VitalsHud", "PLAIN", 0];
+call BL_fnc_clientUpdateVitalsHud;
