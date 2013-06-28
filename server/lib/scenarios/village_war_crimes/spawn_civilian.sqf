@@ -23,7 +23,7 @@ _unit addEventHandler ["killed", {
 	private ["_unit", "_village"];
 	_unit = _this select 0;
 	_village = _unit getVariable "blol_woodsmen_village";
-	[_village, (group _unit)] call BLOL_VWC_fnc_spawnCivilian;
+	[_village, (group _unit)] call BLOL_fnc_scenarios_vwc_spawnCivilian;
 }];
 
 _unit allowFleeing 0;
