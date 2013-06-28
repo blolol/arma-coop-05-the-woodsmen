@@ -1,32 +1,32 @@
 /**
- * Spawns a civilian in the specified village.
+ * Spawns a frightened civilian.
 **/
 
-private ["_civilianClasses", "_civilianGroup", "_village"];
+private ["_classes", "_group", "_position", "_spawnRadius"];
 
-_village = _this select 0;
-_civilianGroup = _this select 1;
+_group = _this select 0;
+_position = _this select 1;
+_spawnRadius = _this select 2;
 
-_civilianClasses = [
+_classes = [
 	"Villager1", "Villager2", "Villager3", "Villager4", "Worker1", "Worker2", "Worker3", "Worker4",
 	"Farmwife1", "Farmwife2", "Farmwife3", "Farmwife4", "Farmwife5"
 ];
 
-_unitClass = _civilianClasses call BIS_fnc_selectRandom;
-_unitPosRadius = ((size _village) call BIS_fnc_arithmeticMean) / 3;
-_unitPos = [(position _village), [0, _unitPosRadius], [0, 360], true, [1, _unitPosRadius]] call SHK_pos;
-_unit = _civilianGroup createUnit [_unitClass, _unitPos, [], 0, "NONE"];
-
-_unit setVariable ["blol_woodsmen_village", _village];
+private ["_class", "_unit"];
+_class = _classes call BIS_fnc_selectRandom;
+_unit = _group createUnit [_class, _position, [], _spawnRadius, "NONE"];
 
 _unit addEventHandler ["killed", {
-	private ["_unit", "_village"];
+	private ["_unit"];
 	_unit = _this select 0;
-	_village = _unit getVariable "blol_woodsmen_village";
-	[_village, (group _unit)] call BLOL_fnc_scenarios_vwc_spawnCivilian;
+	[(group _unit), (position _unit), 5] call BLOL_fnc_scenarios_vwc_spawnCivilian;
 }];
 
 _unit allowFleeing 0;
-{ _unit disableAI _x } forEach ["AUTOTARGET", "MOVE"];
+{ _unit disableAI _x } forEach ["AUTOTARGET", "FSM", "MOVE"];
 _unit setBehaviour "CARELESS";
 _unit stop true;
+
+// Return the unit
+_unit;
