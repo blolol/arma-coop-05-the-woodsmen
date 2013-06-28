@@ -20,7 +20,15 @@ _unit = _group createUnit [_class, _position, [], _spawnRadius, "NONE"];
 _unit addEventHandler ["killed", {
 	private ["_unit"];
 	_unit = _this select 0;
+
+	// Spawn a replacement unit
 	[(group _unit), (position _unit), 5] call BLOL_fnc_scenarios_vwc_spawnCivilian;
+
+	// Garbage collect the dead unit
+	_unit spawn {
+		sleep ([15, 30] call BIS_fnc_randomInt);
+		deleteVehicle _this;
+	}
 }];
 
 _unit allowFleeing 0;
