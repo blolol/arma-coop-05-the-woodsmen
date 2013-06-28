@@ -12,7 +12,7 @@ private ["_civilianCount", "_civilianGroup", "_village", "_villages"];
 
 if (isNil "BLOL_fnc_scenarios_vwc_spawnCivilian") then {
 	BLOL_fnc_scenarios_vwc_spawnCivilian = compile (preprocessFileLineNumbers
-		"server\lib\missions\village_war_crimes\spawn_civilian.sqf");
+		"server\lib\scenarios\village_war_crimes\spawn_civilian.sqf");
 };
 
 // Choose a village near the Woodsmen's camp
