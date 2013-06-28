@@ -26,8 +26,7 @@ _unit addEventHandler ["killed", {
 	[_village, (group _unit)] call BLOL_VWC_fnc_spawnCivilian;
 }];
 
-_unit stop true;
 _unit allowFleeing 0;
-_unit disableAI "AUTOTARGET";
+{ _unit disableAI _x } forEach ["AUTOTARGET", "MOVE"];
 _unit setBehaviour "CARELESS";
-_unit action ["sitDown", _unit];
+_unit stop true;
