@@ -23,7 +23,7 @@ _village = _villages call BIS_fnc_selectRandom;
 
 // Associate civilians with WEST, so that enemies attack them
 _civilianGroup = createGroup ([west] call CBA_fnc_createCenter);
-_civilianCount = [15, 25] call BIS_fnc_randomInt;
+_civilianCount = [7, 18] call BIS_fnc_randomInt;
 
 for "_i" from 1 to _civilianCount do {
 	[_village, _civilianGroup] call BLOL_VWC_fnc_spawnCivilian;
