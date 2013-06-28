@@ -17,6 +17,10 @@ private ["_class", "_unit"];
 _class = _classes call BIS_fnc_selectRandom;
 _unit = _group createUnit [_class, _position, [], _spawnRadius, "NONE"];
 
+// Leave and rejoin the group to force association with the group's side
+[_unit] joinSilent grpNull;
+[_unit] joinSilent _group;
+
 _unit addEventHandler ["killed", {
 	private ["_unit"];
 	_unit = _this select 0;

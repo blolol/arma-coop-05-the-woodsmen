@@ -13,6 +13,11 @@ if (isNil "BLOL_fnc_scenarios_vwc_spawnCivilian") then {
 		"server\lib\scenarios\village_war_crimes\spawn_civilian.sqf");
 };
 
+if (isNil "BLOL_fnc_scenarios_vwc_spawnEnemy") then {
+	BLOL_fnc_scenarios_vwc_spawnEnemy = compile (preprocessFileLineNumbers
+		"server\lib\scenarios\village_war_crimes\spawn_enemy.sqf");
+};
+
 // Choose a village near the Woodsmen's camp
 // TODO Base radius on Woodsmen's reputation, so greater reputation means more distant villages
 private ["_village", "_villagePos", "_villages"];
@@ -24,7 +29,7 @@ _villagePos = position _village;
 
 // Associate civilians with WEST, so that enemies attack them
 private ["_civilianCount", "_civilianGroup"];
-_civilianGroup = createGroup ([west] call CBA_fnc_createCenter);
+_civilianGroup = westDummyGroup;
 _civilianCount = [7, 18] call BIS_fnc_randomInt;
 
 // Choose a few points for civilians to congregate around by spawning two or three "seed" units with
@@ -47,3 +52,17 @@ for "_i" from 1 to (_civilianCount - _civilianSeedCount) do {
 	_position = position (_civilianSeeds call BIS_fnc_selectRandom);
 	[_civilianGroup, _position, 5] call BLOL_fnc_scenarios_vwc_spawnCivilian;
 };
+
+private ["_enemyGroup"];
+_enemyGroup = eastDummyGroup;
+
+// Spawn enemies near each of the civilian groups
+{
+	private ["_enemyCount", "_position"];
+	_enemyCount = [2, 4] call BIS_fnc_randomInt;
+	_position = position _x;
+
+	for "_i" from 1 to _enemyCount do {
+		[_enemyGroup, _position] call BLOL_fnc_scenarios_vwc_spawnEnemy;
+	};
+} forEach _civilianSeeds;
