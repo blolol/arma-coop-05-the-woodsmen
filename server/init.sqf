@@ -4,4 +4,4 @@
 
 blol_woodsmen_missionIdCounter = 0;
 
-["A poultry problem", "Lorem ipsum dolor sit amet"] call BLOL_fnc_missions_create;
+[] execVM "server\lib\missions\village_war_crimes\init.sqf";

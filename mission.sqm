@@ -11,7 +11,8 @@ class Mission
 		"castructures_e_misc_misc_interier",
 		"CAWheeled",
 		"cba_main",
-		"ca_modules_functions"
+		"ca_modules_functions",
+		"CAAir_E_AH6J"
 	};
 	addOnsAuto[]=
 	{
@@ -23,16 +24,22 @@ class Mission
 		"castructures_e_misc_misc_market",
 		"castructures_e_misc_misc_interier",
 		"CAWheeled",
+		"CAAir_E_AH6J",
 		"chernarus"
 	};
 	randomSeed=8054075;
 	class Intel
 	{
-		startWeather=0.25;
+		briefingName="COOP 05 The Woodsmen";
+		briefingDescription="A group of Chernarussian woodsmen are after-hours vigilantes.";
+		resistanceWest=0;
+		startWeather=0.24636042;
+		startFog=0.10203741;
 		forecastWeather=0.25;
-		year=2008;
-		month=10;
-		day=11;
+		forecastFog=0.55462086;
+		year=2013;
+		month=6;
+		day=26;
 		hour=10;
 		minute=20;
 	};
@@ -117,7 +124,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=27;
+		items=28;
 		class Item0
 		{
 			position[]={3445.3379,305.21036,4538.7842};
@@ -381,6 +388,32 @@ class Mission
 			side="EMPTY";
 			vehicle="Misc_Backpackheap";
 			skill=0.60000002;
+		};
+		class Item27
+		{
+			position[]={3429.3611,297.92038,4597.52};
+			azimut=-150.82718;
+			special="NONE";
+			id=31;
+			side="EMPTY";
+			vehicle="MH6J_EP1";
+			skill=0.60000002;
+			init="this addWeaponCargo [""M4A1"", 1]";
+		};
+	};
+	class Markers
+	{
+		items=1;
+		class Item0
+		{
+			position[]={3444.2798,305.43732,4535.417};
+			name="woodcamp";
+			markerType="ELLIPSE";
+			type="Empty";
+			colorName="ColorGreen";
+			fillName="Cross";
+			a=40;
+			b=40;
 		};
 	};
 };
