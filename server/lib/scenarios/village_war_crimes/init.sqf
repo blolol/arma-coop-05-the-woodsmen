@@ -18,6 +18,11 @@ if (isNil "BLOL_fnc_scenarios_vwc_spawnEnemy") then {
 		"server\lib\scenarios\village_war_crimes\spawn_enemy.sqf");
 };
 
+if (isNil "BLOL_fnc_scenarios_vwc_spawnEnemyPatrol") then {
+	BLOL_fnc_scenarios_vwc_spawnEnemyPatrol = compile (preprocessFileLineNumbers
+		"server\lib\scenarios\village_war_crimes\spawn_enemy_patrol.sqf");
+};
+
 // Choose a village near the Woodsmen's camp
 // TODO Base radius on Woodsmen's reputation, so greater reputation means more distant villages
 private ["_village", "_villagePos", "_villages"];
@@ -66,3 +71,11 @@ _enemyGroup = eastDummyGroup;
 		[_enemyGroup, _position] call BLOL_fnc_scenarios_vwc_spawnEnemy;
 	};
 } forEach _civilianSeeds;
+
+// Spawn enemy patrols around the village
+private ["_enemyPatrolCount"];
+_enemyPatrolCount = [0, 2] call BIS_fnc_randomInt;
+
+for "_i" from 1 to _enemyPatrolCount do {
+	[_village] call BLOL_fnc_scenarios_vwc_spawnEnemyPatrol;
+};
