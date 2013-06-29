@@ -8,8 +8,8 @@ _village = _this select 0;
 // Determine rough position
 private ["_distance", "_distances", "_position"];
 _distance = (size _village) call BIS_fnc_arithmeticMean;
-_distances = [(_distance * 0.75), (_distance * 2)];
-_position = [(position _village), _distances, [0, 360], false, [1, (_distance * 1.5)]] call SHK_pos;
+_distances = [(_distance * 0.75), (_distance * 1.25)];
+_position = [(position _village), _distances, [0, 360], false, [1, _distance]] call SHK_pos;
 
 // Spawn the group
 private ["_group", "_unitCount"];
