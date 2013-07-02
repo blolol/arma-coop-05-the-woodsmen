@@ -16,6 +16,13 @@ private ["_group", "_unitCount"];
 _unitCount = [3, 6] call BIS_fnc_randomInt;
 _group = [_position, east, _unitCount] call BIS_fnc_spawnGroup;
 
+// Garbage collect dead units
+{
+	_x addEventHandler ["killed", {
+		[(_this select 0)] call BLOL_fnc_gc_mark;
+	}];
+} forEach (units _group);
+
 // Set patrol waypoints
 private ["_behaviourMode", "_combatMode", "_formation", "_speed",
 	"_waypointCount", "_waypointExec", "_waypointTimeout", "_waypointType"];

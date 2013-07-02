@@ -17,4 +17,9 @@ class Shared {
 		file = "lib\functions\missions\find.sqf";
 		description = "Returns a mission hash for the given mission ID.";
 	};
+
+	class gc_mark {
+		file = "lib\functions\gc\mark.sqf";
+		description = "Marks one or more objects for eventual garbage collection.";
+	};
 };

@@ -29,7 +29,7 @@ _unit addEventHandler ["killed", {
 		}
 	} else {
 		// Eventually garbage collect units killed by players
-		[_unit] call BIS_GC_trashItFunc;
+		[_unit] call BLOL_fnc_gc_mark;
 	};
 }];
 
