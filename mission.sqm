@@ -53,17 +53,117 @@ class Mission
 			side="CIV";
 			class Vehicles
 			{
-				items=1;
+				items=10;
 				class Item0
 				{
 					position[]={3444.6494,305.03964,4540.7832};
-					azimut=-195.56346;
+					azimut=-195.563;
 					id=0;
 					side="CIV";
-					vehicle="Worker2";
+					vehicle="Woodlander4";
 					player="PLAYER COMMANDER";
 					leader=1;
 					skill=0.60000002;
+					description="Woodlander (Green)";
+				};
+				class Item1
+				{
+					position[]={3447.095,305.06976,4539.896};
+					azimut=-145.509;
+					id=35;
+					side="CIV";
+					vehicle="Woodlander1";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="Woodlander (Blue)";
+				};
+				class Item2
+				{
+					position[]={3447.98,305.47955,4532.5049};
+					azimut=-43.099098;
+					id=36;
+					side="CIV";
+					vehicle="Woodlander2";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="Woodlander (Brown)";
+				};
+				class Item3
+				{
+					position[]={3446.3845,305.52573,4532.1147};
+					azimut=-11.2321;
+					id=37;
+					side="CIV";
+					vehicle="Woodlander3";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="Woodlander (Camo)";
+				};
+				class Item4
+				{
+					position[]={3443.3569,305.53311,4533.3848};
+					azimut=-307.13101;
+					id=40;
+					side="CIV";
+					vehicle="Villager1";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="Villager (Blue Check)";
+				};
+				class Item5
+				{
+					position[]={3449.6077,305.30487,4535.8906};
+					azimut=-83.379898;
+					id=39;
+					side="CIV";
+					vehicle="Villager2";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="Villager (Green Check)";
+				};
+				class Item6
+				{
+					position[]={3442.6404,305.40811,4536.9639};
+					azimut=-259.06601;
+					id=42;
+					side="CIV";
+					vehicle="Worker1";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="Worker (Gray)";
+				};
+				class Item7
+				{
+					position[]={3448.8589,305.17133,4538.395};
+					azimut=-121.628;
+					id=43;
+					side="CIV";
+					vehicle="Worker2";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="Worker (Green)";
+				};
+				class Item8
+				{
+					position[]={3449.1521,305.38321,4534.231};
+					azimut=-74.350502;
+					id=38;
+					side="CIV";
+					vehicle="Worker3";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="Worker (Blue)";
+				};
+				class Item9
+				{
+					position[]={3442.6731,305.48801,4534.8818};
+					azimut=-296.75201;
+					id=41;
+					side="CIV";
+					vehicle="Worker4";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="Worker (Brown)";
 				};
 			};
 		};
